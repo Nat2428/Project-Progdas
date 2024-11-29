@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="AAS.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>FORM INPUT MASTER dan Stock DATA BARANG</h1>
+
+      <form action="" id="formdata" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Product Information</legend>
+
+          <label for="id_produk">Kode Produk</label>
+          <input
+            type="text"
+            name="id_produk"
+            id="id_produk"
+            placeholder="MD-001"
+            readonly
+          />
+
+          <label for="nama_produk">Nama Produk</label>
+          <input
+            type="text"
+            name="nama_produk"
+            id="nama_produk"
+            placeholder="Nama Produk"
+          />
+
+          <label for="harga_produk">Harga Produk</label>
+          <input
+            type="number"
+            name="harga_produk"
+            id="harga_produk"
+            placeholder="Harga Produk"
+            min="0"
+            step="0.01"
+          />
+
+          <label for="satuan_produk">Satuan:</label>
+          <select name="satuan_produk" id="satuan_produk">
+            <option value="Piring" disabled selected>Piring</option>
+            <option value="Mangkok">Mangkok</option>
+            <option value="Gelas">Gelas</option>
+          </select>
+
+          <label for="kategori_produk">Kategori:</label>
+          <select name="kategori_produk" id="kategori_produk">
+            <option value= disabled selected>Pilih Kategori</option>
+            <option value=>Makanan</option>
+            <option value=>Minuman</option>
+          </select>
+
+          <label for="stock_produk">Stok Produk</label>
+          <input
+            type="number"
+            name="stock_produk"
+            id="stock_produk"
+            placeholder="Stock Produk"
+            min="0"
+          />
+
+          <label for="gambar_produk">Gambar</label>
+          <input
+            type="url"
+            name="gambar_produk"
+            id="gambar_produk"
+            placeholder="https://example.com/image.jpg"
+          />
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+
+      <h2>Daftar Item</h2>
+      <table style="width: 100%" aria-labelledby="product-list">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Kode Produk</th>
+            <th>Nama Produk</th>
+            <th>Harga Produk</th>
+            <th>Satuan Produk</th>
+            <th>Kategori</th>
+            <th>Stock Produk</th>
+            <th>Gambar Produk</th>
+            <th>Modify</th>
+          </tr>
+        </thead>
+        <tbody id="product-list"></tbody>
+      </table>
+    </div>
+    <script src="AAS.js"></script>
+  </body>
+</html>
